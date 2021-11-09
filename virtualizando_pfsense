@@ -1,5 +1,11 @@
 Nesta etapa irei descrever como instalar o PfSense virtualizado no Promxox.
+
 Uma observação  para este procedimento consideramos que as placas de rede estejam configuradas de acordo com o cenário.
+VMBR0 = Gerencia Proxmox definida no momento da instalação
+VMBR1 = WAN PfSense
+VMBR2 = LAN PfSense
+
+
 
 
 Hardware: 
