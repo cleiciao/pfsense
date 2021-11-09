@@ -1,4 +1,6 @@
 Nesta etapa irei descrever como instalar o PfSense virtualizado no Promxox.
+Uma observação  para este procedimento consideramos que as placas de rede estejam configuradas de acordo com o cenário.
+
 
 Hardware: 
 Memoria 4GB
