@@ -1,0 +1,60 @@
+Nesta etapa irei descrever como instalar o PfSense virtualizado no Promxox.
+
+Hardware: 
+Memoria 4GB
+Processador 2 VCPUs
+HD 16GB mais do que o suficiente
+O recomendado para o PfSense são duas placa de rede, mas como nosso Promxo necessita de uma placa para Gerência é recomendado que o servidor tenha 3 placas de rede.
+1 placa de rede para WAN do PfSense 
+1 Placa de rede para LAN do PfSense
+1 Placa de rede para Gerência do Proxmox
+
+Para obter a ISO do PfSense vamos até o site https://www.pfsense.org/download/ e escolheremos 
+a arquitetura AMD64
+tipo de instalação ISO
+e por ultimo nosso MIRROR > isso fica a sua escolha
+Após o Download da ISO basta fazer o upload dela para o servidor.
+#####################################################################################################################################################################
+
+Para criar a VM no Proxmox é o processo Padrão para qualquer outra VM
+
+No canto superior direito click em CREATE VM.
+
+Nas configurações iniciais escolha do nome da VM  e marque a opção de START AT BOOT "isso faz com que a VM inicie junto com o servidor Proxmox e pode avançar
+#
+#
+Na segunda tela é a escolha da nossa ISO que baixamos anteriormente.
+#
+#
+Em SYSTEM podemos manter o padrão e avançar
+#
+#
+Em HARD-DISK iremos escolher o tamanho de 16GB conforme descrito la no inicio e marcar a caixa DISCARD, caso precise deletar a VM > explicarei mais sobre isso em
+outra etapa.
+#
+#
+Em CPU escolheremos 2 VCPUs
+#
+#
+Em MEMÓRIA iremos colocar os 4GB
+#
+#
+Agora uma parte bem importante é deifinir as placas de rede do nosso Firewal > isso irá de acordo de como vocẽ nomeou sua placas de rede no Proxmox
+Mas cuidado para não escolher as placas de rede eradas e ter dor de cabeça.
+#
+#
+E por fim podemos confirmar a criação da VM caso desejar pode marcar a opção de inicar a VM após a criação da mesma.
+#
+#
+#
+Obs: a instalação do Pfsense não muda por ser virtualizado pode seguir a instalação padrão.
+#
+#
+Iremos configurar algumas coisas após o termino da instalação mesmo.
+
+
+
+
+
+
+
